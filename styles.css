@@ -88,7 +88,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #bad0ea;
+    background: #eaf0f8;
     overflow: hidden;
 }
 
@@ -672,3 +672,113 @@ button:hover {
     transform: rotate(20deg); /* 图标轻微旋转 */
     transition: transform 0.3s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.about-section {
+    background: url('assets/images/paper.png') center/cover no-repeat;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* 关于我们主样式 */
+.about-section {
+    margin: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: column;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+/* 标题样式 */
+.timeline-title, .services-title, .education-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive; /* 可选更优雅的字体 */
+}
+
+/* 时间轴样式 */
+.timeline {
+    width: 40%;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid #090909; /* 时间轴线 */
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    background-color: transparent;
+    color:#000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: -10px;
+}
+/* 服务部分样式 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fffbea;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.service-card h4 {
+    font-size: 1.2em;
+    color: #2a9d8f;
+}
+.service-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* 教育部分样式 */
+.education-card {
+    background: #fffbe0;
+    padding: 20px;
+    border-left: 5px solid #4caf50;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.education-card h4 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
