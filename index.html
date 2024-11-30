@@ -1,197 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>River.H | CS Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- 页面元信息 -->
+  <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设计，适配移动设备 -->
+  <title>River He - Portfolio</title> <!-- 页面标题 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- 引入外部CSS样式表 -->
 </head>
 <body>
-    <!-- 加载屏幕 -->
-    <div id="loading-screen">
-        <div class="spinner"></div>
+<!-- 导航栏 -->
+<nav>
+  <ul>
+    <!-- 导航链接，跳转到页面的特定部分 -->
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <!-- 主页部分 -->
+  <section class="section" id="home">
+    <h1>Hi, I'm River He</h1> <!-- 个人名字，作为主要标题 -->
+    <h2>CS Align Master's Student @ Northeastern University</h2> <!-- 简介，展示学校和专业信息 -->
+    <p>Aspiring software engineer focused on AI, web development, and innovative solutions.</p> <!-- 简单的职业目标介绍 -->
+    <!-- 社交图标和简历按钮 -->
+    <div class="social-resume-row">
+    <!-- GitHub -->
+    <a href="https://github.com/YourUsername" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/YourLinkedInProfile" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <!-- 简历按钮 -->
+    <a href="resume.pdf" class="resume-button" download>
+        Resume <i class="fas fa-file-download"></i>
+    </a>
     </div>
 
-    <!-- 粒子背景 -->
-    <div id="particle-container"></div>
+  </section>
 
-    <!-- 导航栏 -->
-    <header class="navbar">
-        <nav>
-            <a href="#intro" class="logo">River.H</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- 首页 -->
-    <section id="home" class="section">
-        <div class="hero">
-            <img src = "assets/images/logo.png" alt = "River.H" class="hero-logo" >
-            <!-- 添加在首页 hero 里面 -->
-            <p id="dynamic-text"></p>
-        </div>                
-    </section>
-
-    <!-- 介绍 -->
-    <section id="intro" class="section">
-        <div class="chat-container">
-            <!-- 蓝色气泡 -->
-            <div class="chat-bubble right">
-                <p>Hello!</p>
-            </div>
-            <!-- 白色气泡 -->
-            <div class="chat-bubble left">
-<p>
-    Welcome👋~ I'm River He—a passionate creator with a love for building and exploring.  
-    <br><br>
-    Diving into the tech world has been one of the best decisions I've made, and I've discovered a genuine excitement for coding.  
-    <br><br>
-    Every line of code is a new opportunity to create something meaningful and impactful.
-</p>
-
-                
-            </div>
-        <!-- 社交图标放在这里 -->
-<section id="social-options" class="section">
-    <div class="options-container hidden">
-        <a href="your-resume-link.pdf" target="_blank" class="option">
-            <span class="option-text">下载 Resume</span>
-            <i class="fas fa-file-alt"></i>
-        </a>
-        <a href="https://github.com/your-profile" target="_blank" class="option">
-            <span class="option-text">GitHub</span>
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.instagram.com/your-profile" target="_blank" class="option">
-            <span class="option-text">Instagram</span>
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="option">
-            <span class="option-text">LinkedIn</span>
-            <i class="fab fa-linkedin"></i>
-        </a>
+  <!-- 技能部分 -->
+  <section class="section" id="skills">
+    <h2>🛠️ Skills</h2> <!-- 技能标题 -->
+    <div class="skills">
+      <!-- 技能卡片 -->
+      <div class="card">Programming Languages: Python, Java</div>
+      <div class="card">Web Development: HTML, CSS</div>
+      <div class="card">Interests: AI Development, Web Design</div>
     </div>
-</section>
+  </section>
 
-
-
-
-        </div>
-    </section>
-
-
-<section id="about" class="about-section">
-    <h2 class="about-title">About Me</h2>
-    
-    <!-- 时间轴 -->
-    <div class="timeline">
-        <h3 class="timeline-title">My Journey ⛰</h3>
-        <div class="timeline-item">
-            <p class="timeline-date">2020</p>
-            <div class="timeline-content">Started CS Journey - Learning coding fundamentals at university.</div>
-        </div>
-        <div class="timeline-item">
-            <p class="timeline-date">2023</p>
-            <div class="timeline-content">Completed NLP Project - Developed AI tools for language processing.</div>
-        </div>
+  <!-- 项目部分 -->
+  <section class="section" id="projects">
+    <h2>💻 Projects</h2> <!-- 项目标题 -->
+    <div class="projects">
+      <!-- 项目卡片 -->
+      <div class="card">
+        <h3>AI Chatbox</h3> <!-- 项目名称 -->
+        <p>An intelligent chatbot powered by machine learning algorithms.</p> <!-- 项目描述 -->
+        <p><strong>Tech:</strong> Python</p> <!-- 使用的技术 -->
+        <a href="#">View Code on GitHub</a> <!-- 项目代码链接 -->
+      </div>
+      <div class="card">
+        <h3>Blog Website</h3>
+        <p>A sleek, responsive platform for personal blogging.</p>
+        <p><strong>Tech:</strong> HTML, CSS, Flask</p>
+        <a href="#">View Code on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>E-Commerce Website</h3>
+        <p>A platform with secure payments and product management features.</p>
+        <p><strong>Tech:</strong> HTML, CSS, Java</p>
+        <a href="#">View Code on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Travel AI</h3>
+        <p>AI-driven travel planner with personalized recommendations.</p>
+        <p><strong>Tech:</strong> Python, Machine Learning</p>
+        <a href="#">View Code on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Art Platform</h3>
+        <p>A digital space for artists to showcase and sell creations.</p>
+        <p><strong>Tech:</strong> HTML, CSS, Java</p>
+        <a href="#">View Code on GitHub</a>
+      </div>
     </div>
-    
-    <!-- 服务部分 -->
-    <div class="services-section">
-        <h3 class="services-title">Services ✨</h3>
-        <div class="services-grid">
-            <div class="service-card">
-                <h4>🌐 Web Development</h4>
-                <p>Building responsive and interactive websites.</p>
-            </div>
-            <div class="service-card">
-                <h4>🤖 NLP Projects</h4>
-                <p>Developing AI tools for language processing.</p>
-            </div>
-        </div>
+  </section>
+
+  <!-- 联系部分 -->
+  <section class="section" id="contact">
+    <h2>📩 Contact</h2> <!-- 联系标题 -->
+    <div class="contact">
+      <!-- 联系方式 -->
+      <p>Email: <a href="mailto:he.tao@northeastern.edu">he.tao@northeastern.edu</a></p> <!-- 邮箱 -->
+      <p>GitHub: <a href="#">github.com/YourUsername</a></p> <!-- GitHub 链接 -->
+      <p>LinkedIn: <a href="#">linkedin.com/in/YourLinkedInProfile</a></p> <!-- LinkedIn 链接 -->
     </div>
+  </section>
+</div>
+<button id="scroll-top" class="scroll-top">↑</button>
 
-    <!-- 教育部分 -->
-    <div class="education-section">
-        <h3 class="education-title">Education 🎓</h3>
-        <div class="education-card">
-            <h4>University of Example</h4>
-            <p>Bachelor's in Computer Science (2020-2024)</p>
-        </div>
-    </div>
-</section>
-
-
-
-    <!--增加滚动视差效果-->
-    <div class="parallax"></div>
-
-    <section id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <div class="circle-container">
-            <div class="circle">
-                <div class="percent">
-                    <svg>
-                        <circle cx="50" cy="50" r="40"></circle>
-                        <circle cx="50" cy="50" r="40" style="--percent: 85"></circle>
-                    </svg>
-                    <div class="label">JavaScript</div>
-                </div>
-            </div>
-            <div class="circle">
-                <div class="percent">
-                    <svg>
-                        <circle cx="50" cy="50" r="40"></circle>
-                        <circle cx="50" cy="50" r="40" style="--percent: 90"></circle>
-                    </svg>
-                    <div class="label">Python</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!--增加滚动视差效果-->
-    <div class="parallax"></div>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A responsive personal portfolio.</p>
-        </div>
-        <div class="project-card">
-            <h3>NLP Tool</h3>
-            <p>Sentiment analysis using Python.</p>
-        </div>
-    </section>
-
-        <!--增加滚动视差效果-->
-    <div class="parallax"></div>
-
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <button id="scroll-top" class="scroll-top">↑</button>
-    <script src="script.js"></script>
+<script src="script.js"></script> <!-- 引入外部JavaScript文件 -->
 </body>
 </html>

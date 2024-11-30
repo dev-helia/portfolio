@@ -1,0 +1,193 @@
+/* ====== 通用样式 ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0073e6, #00c6ff); /* 背景渐变 */
+  color: #fff; /* 全局字体颜色为白色 */
+  text-align: center; /* 文本居中对齐 */
+  line-height: 1.6; /* 行高 */
+}
+
+h1, h2 {
+  margin: 20px 0; /* 标题间距 */
+}
+
+a {
+  text-decoration: none; /* 去掉下划线 */
+  color: #00ffcc; /* 链接颜色 */
+}
+
+.button {
+  background-color: #fff; /* 按钮背景色 */
+  color: #0073e6; /* 按钮文字颜色 */
+  border: none; /* 无边框 */
+  padding: 10px 20px; /* 内边距 */
+  margin: 10px; /* 外边距 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer; /* 鼠标样式 */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 平滑过渡 */
+}
+
+.button:hover {
+  background-color: #00c6ff; /* 悬停背景色 */
+  color: #fff; /* 悬停文字颜色 */
+  transform: scale(1.05); /* 放大效果 */
+}
+
+/* ====== 导航栏样式 ====== */
+nav {
+  position: sticky; /* 固定顶部 */
+  top: 0;
+  background: rgba(0, 0, 0, 0.8); /* 半透明背景 */
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex; /* 水平排列 */
+  justify-content: center; /* 居中对齐 */
+  list-style: none; /* 去掉列表样式 */
+}
+
+nav ul li a {
+  color: white; /* 链接颜色 */
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #00c6ff; /* 悬停背景色 */
+  border-radius: 5px;
+}
+
+/* ====== 页面布局 ====== */
+.container {
+  max-width: 900px; /* 最大宽度 */
+  margin: auto; /* 居中对齐 */
+  padding: 20px;
+}
+
+.section {
+  padding: 40px 0; /* 内边距 */
+  opacity: 0; /* 默认透明 */
+  transform: translateY(30px); /* 下移 */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* 动画过渡 */
+}
+
+.section.visible {
+  opacity: 1; /* 进入视口时显示 */
+  transform: translateY(0); /* 移回原位 */
+}
+
+.skills, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 自适应网格 */
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+  padding: 20px;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(1deg); /* 放大并旋转 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* 阴影增加 */
+}
+
+/* ====== 联系部分 ====== */
+.contact {
+  padding: 20px;
+  background: #005bb5; /* 蓝色背景 */
+  border-radius: 10px;
+}
+
+/*⭐️ scroll*/
+/* 返回顶部按钮样式 */
+/* 返回顶部按钮的样式 */
+.scroll-top {
+    position: fixed;  /* 固定在页面右下角 */
+    bottom: 20px;  /* 距离底部 20px */
+    right: 20px;  /* 距离右侧 20px */
+    width: 60px;  /* 按钮宽度 */
+    height: 60px;  /* 按钮高度 */
+    background-color: #00ffcc;  /* 按钮背景色 */
+    color: #1d3557;  /* 按钮文本颜色 */
+    font-size: 2rem;  /* 按钮字体大小 */
+    border: none;  /* 去除边框 */
+    border-radius: 50%;  /* 圆形按钮 */
+    display: flex;  /* 使用 Flexbox 来居中文本 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+    cursor: pointer;  /* 鼠标悬停时显示手型 */
+    opacity: 0;  /* 默认透明 */
+    visibility: hidden;  /* 默认隐藏 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;  /* 动画过渡 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* 按钮阴影 */
+}
+
+.scroll-top.visible {
+    opacity: 1;  /* 滚动时显示按钮 */
+    visibility: visible;  /* 按钮可见 */
+}
+
+.scroll-top:hover {
+    background-color: #0073e6;  /* 鼠标悬停时背景颜色变为蓝色 */
+    color: white;  /* 鼠标悬停时文本颜色变为白色 */
+    transform: scale(1.1);  /* 鼠标悬停时按钮轻微放大 */
+}
+
+/*社交⭐️*/
+
+/* 父容器样式，水平排列 */
+.social-resume-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* 图标和按钮的间距 */
+  margin: 20px 0; /* 与其他部分保持间隔 */
+}
+
+/* 社交图标样式 */
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0073e6, #00c6ff);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 简历按钮样式 */
+.resume-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #0073e6, #00c6ff);
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* 按钮文字和图标之间的间距 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
