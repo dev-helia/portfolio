@@ -43,3 +43,38 @@ scrollTopBtn.addEventListener("click", () => {
     behavior: "smooth",  // 平滑滚动
   });
 });
+
+
+// 动态设置技能环形图的进度条
+// 动态加载环形进度条
+// 动态设置技能环形图的进度条
+window.addEventListener('load', () => {
+  const circles = document.querySelectorAll('.circle');
+
+  circles.forEach((circle) => {
+    const progress = circle.getAttribute('data-progress');
+    let start = 0;
+
+    const interval = setInterval(() => {
+      if (start >= progress) {
+        clearInterval(interval);
+      } else {
+        start++;
+        circle.style.background = `conic-gradient(
+          #555 ${start * 3.6}deg, /* 黑色环形进度条 */
+          #e0e0e0 0deg
+        )`; /* 灰色背景 */
+      }
+    }, 10); // 每 10ms 增加 1%
+  });
+});
+
+// 夜间模式
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode"); // 切换 dark-mode 类
+  themeToggle.textContent = body.classList.contains("dark-mode") ? "🌙" : "🌞"; // 按钮图标
+});
+
