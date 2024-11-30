@@ -84,3 +84,22 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+// 汉堡菜单
+// 获取汉堡菜单按钮和导航链接列表
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navLinks = document.getElementById("nav-links");
+
+// 点击汉堡菜单，切换导航链接显示状态
+hamburgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("active"); // 切换 .active 类
+});
+
+// 点击页面其他地方时关闭菜单
+document.addEventListener("click", (event) => {
+  // 如果点击的不是导航链接和汉堡菜单，隐藏导航
+  if (!navLinks.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+
+

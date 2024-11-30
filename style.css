@@ -68,14 +68,14 @@ body.dark-mode nav {
 }
 
 /* 右侧导航链接 */
-.nav-right {
+.nav-links {
   display: flex; /* 横向排列 */
   list-style: none; /* 去掉默认列表样式 */
   gap: 20px; /* 每个导航链接的间距 */
   margin-right: 20px; /* 右侧导航链接距离右侧边距 */
 }
 
-.nav-right li a {
+.nav-links li a {
   color: rgb(78, 76, 76); /* 文字颜色 */
   padding: 10px 20px; /* 内边距 */
   text-decoration: none; /* 去掉下划线 */
@@ -86,16 +86,16 @@ body.dark-mode nav {
   transition: background-color 0.3s ease, color 0.3s ease; /* 平滑过渡效果 */
   box-shadow: 0 0 8px 2px silver, 0 0 12px 4px white; /* 添加发光阴影 */
 }
-body.dark-mode .nav-right li a {
+body.dark-mode .nav-links li a {
   color: #ffffff; /* 白色文字 */
   box-shadow: 0 0 8px 2px silver, 0 0 12px 4px gray; /* 夜间的发光效果 */
 }
-.nav-right li a:hover {
+.nav-links li a:hover {
   background-color: rgb(78, 76, 76); /* 悬停时背景变黑 */
   color: #fff; /* 悬停时文字变白 */
   transform: scale(1.05); /* 悬停时稍微放大按钮 */
 }
-body.dark-mode .nav-right li a:hover {
+body.dark-mode .nav-links li a:hover {
   background-color: #ffffff; /* 悬停时背景变浅 */
   color: #000000; /* 悬停时文字变深 */
 }
@@ -333,7 +333,7 @@ body.dark-mode .circle {
   top: 50%; /* 垂直居中 */
   left: 50%; /* 水平居中 */
   transform: translate(-50%, -50%); /* 将图标中心点移到父容器中心 */
-  background-color: #cccccc; /* 图标背景颜色 */
+  background-color: #ffffff; /* 图标背景颜色 */
   width: 50px; /* 图标容器的宽度 */
   height: 50px; /* 图标容器的高度 */
   border-radius: 50%; /* 图标容器为圆形 */
@@ -429,8 +429,6 @@ body.dark-mode .browser-header {
   color: #ffffff;
 }
 
-
-
 /* 浏览器按钮 */
 .browser-buttons {
   display: flex;
@@ -490,8 +488,6 @@ body.dark-mode .contact-form label {
   border-radius: 5px;
   font-size: 0.9rem;
 }
-
-
 
 .contact-form button {
   padding: 15px 30px;
@@ -569,7 +565,6 @@ body.dark-mode .scroll-top:before {
 
 .scroll-top i {
   font-size: 2rem; /* 图标大小 */
-  font-weight: 2000; /* 加粗 */
   position: relative;
   z-index: 1; /* 确保箭头在云朵上方 */
   color: #6f6f6f; /* 向上的箭头颜色 */
@@ -581,3 +576,77 @@ body.dark-mode .scroll-top i {
 
 
 
+
+/* ====== 响应式 ====== */
+/* 针对平板（768px 以下） */
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 85%; /* 更窄的内容宽度 */
+    padding: 10px; /* 减小内边距 */
+  }
+}
+
+/* 针对手机（480px 以下） */
+@media screen and (max-width: 480px) {
+
+  .logo {
+    width: 100px; /* 缩小 Logo */
+    height: auto;
+  }
+
+  .resume-button {
+    font-size: 0.9rem; /* 缩小 Resume 按钮文字 */
+    padding: 10px 15px;
+  }
+  .contack-form button{
+    width: 40%; /* 缩小按钮宽度 */
+    font-size: 0.9rem; /* 缩小 Resume 按钮文字 */
+  }
+}
+
+
+/* 汉堡菜单默认样式 */
+.hamburger-menu {
+  display: none; /* 默认隐藏，仅移动端显示 */
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 1001;
+  color: #333;
+}
+
+body.dark-mode .hamburger-menu {
+  color: #fff;
+}
+
+
+/* 移动设备上显示汉堡菜单 */
+@media screen and (max-width: 768px) {
+.hamburger-menu {
+    display: block;
+    margin-right: 40px;
+}
+  .nav-links {
+    display: none; /* 默认隐藏导航链接 */
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(244, 244, 244, 0.95); /* 背景色 */
+    position: absolute;
+    top: 70px; /* 确保在导航栏下方显示 */
+    right: 90px; /* 靠右显示 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    z-index: 1000;
+    position:absolute;
+  }
+  body.dark-mode .nav-links {
+    background: rgba(18, 18, 18, 0.95); /* 夜间模式背景 */
+  }
+
+  .nav-links.active {
+    display: flex; /* 激活时显示链接 */
+  }
+}
