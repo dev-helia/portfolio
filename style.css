@@ -12,6 +12,10 @@ body {
   text-align: center; /* 文本居中对齐 */
   line-height: 1.6; /* 行高 */
 }
+body.dark-mode {
+  background-color: rgb(18,18,18); /* 黑色背景 */
+  color: #fff; /* 白色字体 */
+}
 
 h1, h2 {
   margin: 20px 0; /* 标题间距 */
@@ -33,6 +37,10 @@ nav {
   justify-content: space-between; /* 左右对齐 */
   align-items: center; /* 垂直居中 */
   z-index: 1000;
+}
+
+body.dark-mode nav {
+  background: rgb(18,18,18,0.8); /* 黑色背景 */
 }
 
 /* 左侧 Logo 和按钮 */
@@ -78,11 +86,18 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease; /* 平滑过渡效果 */
   box-shadow: 0 0 8px 2px silver, 0 0 12px 4px white; /* 添加发光阴影 */
 }
-
+body.dark-mode .nav-right li a {
+  color: #ffffff; /* 白色文字 */
+  box-shadow: 0 0 8px 2px silver, 0 0 12px 4px gray; /* 夜间的发光效果 */
+}
 .nav-right li a:hover {
   background-color: rgb(78, 76, 76); /* 悬停时背景变黑 */
   color: #fff; /* 悬停时文字变白 */
   transform: scale(1.05); /* 悬停时稍微放大按钮 */
+}
+body.dark-mode .nav-right li a:hover {
+  background-color: #ffffff; /* 悬停时背景变浅 */
+  color: #000000; /* 悬停时文字变深 */
 }
 
 /* ====== 页面布局 ====== */
@@ -97,6 +112,13 @@ nav {
   padding: 20px;
   background-color: rgba(245, 245, 245, 0); /* 半透明白色 */
 }
+
+body.dark-mode .container {
+  background-color: rgba(25, 25, 25, 0.8); /* 黑色半透明背景 */
+}
+
+
+
 .container {
   margin-top: 130px; /* 导航栏高度+间隔 */
 }
@@ -141,6 +163,9 @@ nav {
   font-size: 1.5rem;
   color: #555;
 }
+body.dark-mode .introduction-section h2 {
+  color: #e0dddd; /* 白色文字 */
+}
 .introduction-section p {
   font-size: 1rem;
   margin: 10px 0;
@@ -164,6 +189,11 @@ nav {
   align-items: center;
   justify-content: center;
 }
+/* 夜间模式社交图标样式 */
+body.dark-mode .social-icon {
+  color: #ffffff; /* 浅色图标 */
+}
+
 .social-icon:hover {
   transform: scale(1.6); /* 鼠标悬停时放大 */
   transform: rotate3d(1, 1, 1, 30deg); /* 3D旋转 */
@@ -182,7 +212,10 @@ nav {
   gap: 8px; /* 文字和图标的间距 */
   border-radius: 8px;
 }
-
+body.dark-mode .resume-button {
+  background-color: #ffffff; /* 白色按钮 */
+  color: #000000; /* 黑色文字 */
+}
 .resume-button span {
   margin-right: 8px; /* 文字与图标之间的距离 */
 }
@@ -221,8 +254,8 @@ nav {
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 两列布局 */
-  gap: 20px;
-  max-width: 70%; /* 限制最大宽度 */
+  gap: 30px;
+  max-width: 86%; /* 限制最大宽度 */
   margin:0 auto; /* 居中对齐 */
 }
 
@@ -230,9 +263,17 @@ nav {
   background: rgba(255, 255, 255, 0.1); /* 半透明背景 */
   padding: 20px;
   border-radius: 10px; /* 圆角 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.2); /* 深化阴影 */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
 }
+
+/* 夜间模式技能卡片 */
+body.dark-mode .card {
+  background: rgba(255, 255, 255, 0.05); /* 更深的透明背景 */
+  color: #ffffff; /* 白色文字 */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* 浅色阴影 */
+}
+
 
 .card:hover {
   transform: scale(1.05) rotate(1deg); /* 放大并旋转 */
@@ -249,14 +290,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 40px; /* 整个图标区域与卡片底部的额外间距 */
 }
 
 .circle {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: conic-gradient(
     #e0e0e0 0deg,
@@ -265,11 +306,20 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 0.5rem;
   text-align: center;
   color: #333; /* 黑色文字 */
 }
+
+body.dark-mode .circle {
+  background: conic-gradient(
+    #333 0deg,
+    #333 360deg
+  ); /* 夜间模式全黑色 */
+  color: #ffffff; /* 白色文字 */
+}
+
+
 .circle:hover {
   transform: scale(1.2); /* 鼠标悬停时放大 */
   transition: transform 0.3s ease; /* 平滑过渡 */
@@ -277,30 +327,38 @@ nav {
 
 /* 环形图中的图标 */
 .skill-icon {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #333; /* 图标颜色为黑色 */
   position: absolute;
   top: 50%; /* 垂直居中 */
   left: 50%; /* 水平居中 */
   transform: translate(-50%, -50%); /* 将图标中心点移到父容器中心 */
-  background-color: #e0e0e0; /* 图标背景颜色 */
-  width: 70px; /* 图标容器的宽度 */
-  height: 70px; /* 图标容器的高度 */
+  background-color: #cccccc; /* 图标背景颜色 */
+  width: 50px; /* 图标容器的宽度 */
+  height: 50px; /* 图标容器的高度 */
   border-radius: 50%; /* 图标容器为圆形 */
   display: flex;
   align-items: center;
   justify-content: center; /* 确保图标在容器内也居中 */
 }
 
+body.dark-mode .skill-icon {
+  background-color: #333; /* 图标背景颜色 */
+  color: #ffffff; /* 白色文字 */
+}
+
 
 /* 技能名字 */
 .circle span {
   position: absolute;
-  bottom: -20px; /* 放置在环形图下方 */
+  bottom: -22px; /* 放置在环形图下方 */
   font-size: 0.9rem;
   color: #555; /* 灰色文字 */
 }
 
+body.dark-mode .circle span {
+  color: #e0e0e0; /* 白色文字 */
+}
 
 /* ====== projects 部分样式 ====== */
 .projects {
@@ -351,6 +409,11 @@ h2 {
   margin: 0 auto;
 }
 
+body.dark-mode .contact-browser {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(255, 0.2);
+}
+
 /* 浏览器顶部 */
 .browser-header {
   height: 30px;
@@ -360,6 +423,13 @@ h2 {
   padding: 0 10px;
   border-radius: 10px 10px 0 0;
 }
+
+body.dark-mode .browser-header {
+  background-color: #333;
+  color: #ffffff;
+}
+
+
 
 /* 浏览器按钮 */
 .browser-buttons {
@@ -408,6 +478,10 @@ h2 {
   color: #333;
 }
 
+body.dark-mode .contact-form label {
+  color: #ffffff; /* 白色文字 */
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -416,6 +490,8 @@ h2 {
   border-radius: 5px;
   font-size: 0.9rem;
 }
+
+
 
 .contact-form button {
   padding: 15px 30px;
@@ -435,6 +511,14 @@ h2 {
   background-color: #010204;
 }
 
+body.dark-mode .contact-form button {
+  background-color: #ffffff;
+  color: #000000; /* 黑色文字 */
+}
+
+.contact-form button:hover {
+  background-color: #747474;
+}
 
 /* ====== 回到顶部 ====== */
 .scroll-top {
@@ -472,6 +556,10 @@ h2 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 给云朵添加柔和阴影 */
 }
 
+body.dark-mode .scroll-top:before {
+  color: rgba(0, 0, 0, 1); /* 黑色文字 */
+}
+
 /* 鼠标悬停效果 */
 .scroll-top:hover {
   transform: scale(1.5); /* 放大效果 */
@@ -487,11 +575,9 @@ h2 {
   color: #6f6f6f; /* 向上的箭头颜色 */
 }
 
-
-
-/* ====== 夜间模式 ====== */
-body.dark-mode {
-  background-color: #121212; /* 深色背景 */
-  color: #ffffff; /* 浅色文字 */
+body.dark-mode .scroll-top i {
+  color: #e0e0e0; /* 白色文字 */
 }
+
+
 

@@ -76,5 +76,11 @@ const body = document.body;
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode"); // 切换 dark-mode 类
   themeToggle.textContent = body.classList.contains("dark-mode") ? "🌙" : "🌞"; // 按钮图标
+  const logo = document.querySelector(".logo");
+  if (body.classList.contains("dark-mode")) {
+    logo.src = "assets/images/night-logo.png"; // 夜间 Logo
+  } else {
+    logo.src = "assets/images/day-logo.png"; // 白天 Logo
+  }
 });
 
