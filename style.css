@@ -651,3 +651,28 @@ body.dark-mode .hamburger-menu {
     display: flex; /* 激活时显示链接 */
   }
 }
+
+/* 针对手机（480px 以下）的调整 */
+@media screen and (max-width: 480px) {
+  .scroll-top {
+    bottom: 20px; /* 更靠近底部 */
+    left:10px; /* 更靠近屏幕左侧 */
+    font-size: 1.2rem; /* 缩小按钮大小 */
+  }
+
+  .scroll-top i {
+    font-size: 1rem; /* 缩小箭头图标 */
+  }
+  .scroll-top:before {
+  content: '\f0c2'; /* Font Awesome 云朵图标 */
+  font-family: 'Font Awesome 5 Free'; /* 使用 Font Awesome 字体 */
+  font-weight: 900; /* 加粗 */
+  font-size: 3rem; /* 云朵大小 */
+  color: transparent; /* 清透白色 */
+  position: absolute;
+  top: -13px; /* 调整云朵相对按钮的位置 */
+  left: -17px; /* 调整云朵相对按钮的位置 */
+  z-index: -1; /* 确保云朵在箭头后面 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 给云朵添加柔和阴影 */
+}
+}
