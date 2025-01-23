@@ -490,7 +490,7 @@ body.dark-mode .contact-form label {
 }
 
 .contact-form button {
-  padding: 15px 30px;
+  padding: 15px 0px;
   border: none;
   width: 30%;
   margin:0 auto;
@@ -547,7 +547,7 @@ body.dark-mode .contact-form button {
   color: rgba(255, 255, 255, 1); /* 清透白色 */
   position: absolute;
   top: -17px; /* 调整云朵相对按钮的位置 */
-  left: -20px; /* 调整云朵相对按钮的位置 */
+  left: -17px; /* 调整云朵相对按钮的位置 */
   z-index: -1; /* 确保云朵在箭头后面 */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 给云朵添加柔和阴影 */
 }
@@ -631,14 +631,15 @@ body.dark-mode .hamburger-menu {
   .nav-links {
     display: none; /* 默认隐藏导航链接 */
     flex-direction: column;
-    gap: 10px;
-    background: rgba(244, 244, 244, 0.95); /* 背景色 */
+    gap: 30px;
+    background: transparent; /* 背景色 */
     position: absolute;
     top: 70px; /* 确保在导航栏下方显示 */
-    right: 90px; /* 靠右显示 */
+    right: 0px; /* 靠右显示 */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    border-radius: 0px;
+    border-left: 1px;
+    border-left: #000;
     z-index: 1000;
     position:absolute;
   }
