@@ -544,9 +544,9 @@ body.dark-mode .contact-form button {
   font-family: 'Font Awesome 5 Free'; /* 使用 Font Awesome 字体 */
   font-weight: 900; /* 加粗 */
   font-size: 4rem; /* 云朵大小 */
-  color: rgba(255, 255, 255, 1); /* 清透白色 */
+  color: transparent; /* 清透白色 */
   position: absolute;
-  top: -17px; /* 调整云朵相对按钮的位置 */
+  top: -13px; /* 调整云朵相对按钮的位置 */
   left: -17px; /* 调整云朵相对按钮的位置 */
   z-index: -1; /* 确保云朵在箭头后面 */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 给云朵添加柔和阴影 */
